@@ -1,7 +1,6 @@
 class Scanner
   def initialize
     @scanned_items = []
-    @total = 0
   end
 
   def scan(item)
@@ -9,7 +8,6 @@ class Scanner
   end
 
   def total
-    @total = @scanned_items.map { |item| item.price }.sum
-
+    @scanned_items.map { |item| item.price }.sum
   end
 end
