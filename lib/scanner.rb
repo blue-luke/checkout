@@ -1,13 +1,15 @@
 class Scanner
   def initialize
+    @scanned_items = []
     @total = 0
   end
 
   def scan(item)
-    @total += item.price
+    @scanned_items.append(item)
   end
 
   def total
-    @total
+    @total = @scanned_items.map { |item| item.price }.sum
+
   end
 end
